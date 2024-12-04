@@ -1,0 +1,17 @@
+/* Font faces */
+
+@font-face {
+	font-display: swap;
+	font-family: "Manrope";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../fonts/manrope-regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-display: swap;
+	font-family: "Uncage";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../../fonts/uncage-regular.woff2") format("woff2");
+}
