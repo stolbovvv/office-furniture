@@ -1,0 +1,82 @@
+/* Component: Review card */
+
+.review-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	padding: 1.875rem;
+	background-color: var(--clr-light-green-1);
+}
+
+.review-card__head {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+}
+
+.review-card__head-image {
+	width: 5rem;
+	height: 5rem;
+	border-radius: 50%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.review-card__head-info {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.review-card__head-name {
+	margin-block-start: 0;
+}
+
+.review-card__head-order {
+	margin-block-start: 0;
+}
+
+.review-card__body {
+	margin-block-start: 0;
+}
+
+.review-card__body > *:first-child {
+	margin-block-start: 0;
+}
+
+.review-card__button {
+	align-self: flex-start;
+	margin-block-start: auto;
+	padding: 0.25em 0;
+	border: none;
+	background: none;
+}
+
+.review-card__button-text {
+	border-bottom: 1px dashed currentColor;
+}
+
+@media (width <= 79.999em) {
+	.review-card {
+		padding: 1.25rem;
+	}
+}
+
+@media (width <= 47.999em) {
+	.review-card {
+		padding: 0.625rem;
+	}
+
+	.review-card__head {
+		gap: 0.625rem;
+	}
+
+	.review-card__head-info {
+		gap: 0.125rem;
+	}
+
+	.review-card__head-image {
+		width: 2.5rem;
+		height: 2.5rem;
+	}
+}

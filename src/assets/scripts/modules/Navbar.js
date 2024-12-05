@@ -1,4 +1,5 @@
-/** Modules: Site menu */
+/** Module: Navbar */
+
 import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
 export class Navbar {

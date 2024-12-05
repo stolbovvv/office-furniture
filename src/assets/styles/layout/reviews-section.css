@@ -1,0 +1,34 @@
+/* Layout: Reviews section */
+
+.reviews-section {
+	padding-block: 3.125rem;
+}
+
+.reviews-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.reviews-section__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1.25rem;
+}
+
+.reviews-section__heading {
+	flex: 1 1 auto;
+}
+
+.reviews-section__buttons {
+	display: flex;
+	flex: 0 0 auto;
+	gap: 0.625rem;
+}
+
+@media (width <= 79.999em) {
+	.reviews-section {
+		padding-block: 1.875rem;
+	}
+}

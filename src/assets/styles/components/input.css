@@ -1,0 +1,19 @@
+/* Component: Input */
+
+.input {
+	display: inline-block;
+	padding: 1.25em 1.5em;
+	border: 1px solid var(--clr-secondary-2);
+	background-color: var(--clr-secondary-2);
+	color: var(--clr-white);
+	font-family: var(--ff-accent);
+	line-height: 1;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all var(--transition-sm);
+	cursor: pointer;
+}
+
+.input::placeholder {
+	color: var(--clr-secondary-3);
+}

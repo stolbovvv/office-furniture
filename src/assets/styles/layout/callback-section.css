@@ -1,0 +1,28 @@
+/* Layout: Callback section */
+
+.callback-section {
+	position: relative;
+	margin-block: 3.175rem;
+	background-color: var(--clr-secondary-3);
+	color: var(--clr-white);
+}
+
+.callback-section__container {
+	display: flex;
+	flex-direction: column;
+	padding-block: 3.125rem;
+}
+
+.callback-section__form {
+	flex: 0 0 auto;
+}
+
+@media (width <= 79.999em) {
+	.callback-section {
+		margin-block: 1.875rem;
+	}
+
+	.callback-section__container {
+		padding-block: 1.875rem;
+	}
+}

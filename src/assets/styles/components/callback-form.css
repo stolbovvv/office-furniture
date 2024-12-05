@@ -1,0 +1,48 @@
+/* Component: Callback form */
+
+.callback-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.callback-form__heading {
+	margin-block-start: 0;
+}
+
+.callback-form__description {
+	margin-block-start: 1.25rem;
+}
+
+.callback-form__body {
+	display: flex;
+	gap: 1.25rem;
+	margin-block-start: 1.875rem;
+}
+
+.callback-form__input {
+	flex: 0 0 auto;
+	width: min(18.75rem, 33.333%);
+}
+
+.callback-form__button {
+	flex: 0 0 auto;
+}
+
+.callback-form__agreement {
+	margin-block-start: 1.875rem;
+	opacity: 0.5;
+}
+
+.callback-form__agreement > a {
+	color: inherit;
+}
+
+@media (width <= 47.999em) {
+	.callback-form__body {
+		flex-direction: column;
+	}
+
+	.callback-form__input {
+		width: auto;
+	}
+}

@@ -1,0 +1,46 @@
+/* Component: Case card */
+
+.case-card {
+	display: flex;
+	flex-direction: column;
+	gap: 1.125rem;
+}
+
+.case-card__image {
+	width: 100%;
+	height: 20rem;
+	object-fit: cover;
+	object-position: center;
+}
+
+.case-card__heading {
+	margin-block-start: 0;
+}
+
+.case-card__address {
+	margin-block-start: auto;
+	opacity: 0.5;
+}
+
+.case-card__tags {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	gap: 0.625rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.case-card__tag {
+	padding: 0.625em 1.125rem;
+	border-radius: 999em;
+	background-color: var(--clr-secondary-3);
+	color: var(--clr-white);
+}
+
+@media (width <= 47.999em) {
+	.case-card__image {
+		height: 15rem;
+	}
+}

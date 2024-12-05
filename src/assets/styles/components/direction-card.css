@@ -1,0 +1,36 @@
+/* Component: Direction card */
+
+.direction-card {
+	display: flex;
+	align-items: flex-end;
+	gap: 1.25rem;
+	padding: 2rem;
+	background-color: var(--clr-light-green-1);
+}
+
+.direction-card__body {
+	flex: 1 1 auto;
+}
+
+.direction-card__heading {
+	margin-block-start: 0;
+}
+
+.direction-card__image {
+	aspect-ratio: 1;
+	width: 10rem;
+	object-fit: contain;
+	object-position: center;
+}
+
+@media (width <= 63.999em) {
+	.direction-card {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		padding: 0.625rem;
+	}
+
+	.direction-card__image {
+		margin-inline: auto;
+	}
+}

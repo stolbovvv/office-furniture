@@ -1,4 +1,4 @@
-/* General styles */
+/* Global styles */
 
 *,
 *::before,
@@ -17,8 +17,8 @@ html {
 
 body {
 	margin: 0;
-	background-color: var(--clr-neutral-1);
-	color: var(--clr-neutral-9);
+	background-color: var(--clr-white);
+	color: var(--clr-dark-3);
 	font-family: var(--ff-common);
 	font-size: var(--fs-md);
 	font-weight: var(--fw-md);

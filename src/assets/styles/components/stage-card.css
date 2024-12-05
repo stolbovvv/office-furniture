@@ -1,0 +1,52 @@
+/* Component: Stage card */
+
+.stage-card {
+	position: relative;
+	min-height: 18.75rem;
+}
+
+.stage-card__image {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.stage-card__body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0.625rem;
+	padding: 1.875rem;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.25);
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+	color: var(--clr-white);
+}
+
+.stage-card__number {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 3.125rem;
+	height: 3.125rem;
+	border-radius: 50%;
+	background-color: var(--clr-primary-3);
+	font-size: var(--fs-heading-3-lg);
+}
+
+.stage-card__heading {
+	margin-block-start: auto;
+}
+
+.stage-card__description {
+	margin-block-start: 0.5em;
+}
+
+@media (width <= 47.999em) {
+	.stage-card__body {
+		padding: 1.25rem;
+	}
+}

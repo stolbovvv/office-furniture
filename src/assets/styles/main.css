@@ -1,22 +1,44 @@
-/* Globals */
+/* Vendors */
 
-@import url("./globals/font-face.css");
-@import url("./globals/general.css");
-@import url("./globals/root.css");
+@import url("@splidejs/splide/css/core");
+
+/* General */
+
+@import url("./general/font-face.css");
+@import url("./general/root.css");
+@import url("./general/globals.css");
 
 /* Components */
 
-@import url("./components/button.css");
-@import url("./components/burger.css");
+@import url("./components/heading.css");
 @import url("./components/site-logo.css");
+@import url("./components/burger.css");
+@import url("./components/button.css");
+@import url("./components/slider-button.css");
+@import url("./components/input.css");
+@import url("./components/service-card.css");
+@import url("./components/direction-card.css");
+@import url("./components/case-card.css");
+@import url("./components/stage-card.css");
+@import url("./components/review-card.css");
+@import url("./components/callback-form.css");
 
 /* Layouts */
 
 @import url("./layout/header.css");
 @import url("./layout/navbar.css");
 @import url("./layout/footer.css");
+@import url("./layout/hero-section.css");
+@import url("./layout/services-section.css");
+@import url("./layout/directions-section.css");
+@import url("./layout/cases-section.css");
+@import url("./layout/stages-section.css");
+@import url("./layout/callback-section.css");
+@import url("./layout/reviews-section.css");
+@import url("./layout/quiz-section.css");
 
 /* Utilities */
 
+@import url("./utilities/margins.css");
 @import url("./utilities/wrapper.css");
 @import url("./utilities/container.css");

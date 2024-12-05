@@ -3,9 +3,9 @@
 .site-logo {
 	display: inline-block;
 	padding: 1.25em;
-	border: 1px solid var(--clr-neutral-8);
-	background-color: var(--clr-neutral-8);
-	color: var(--clr-neutral-1);
+	border: 1px solid var(--clr-dark-2);
+	background-color: var(--clr-dark-2);
+	color: var(--clr-white);
 	font-family: var(--ff-accent);
 	line-height: 1;
 	text-transform: uppercase;

@@ -1,0 +1,5 @@
+/* Utilities: margins */
+
+.no-margin-bottom {
+	margin-block-end: 0;
+}

@@ -1,10 +1,11 @@
 /* Component: Button */
 
 .button {
+	display: inline-block;
 	padding: 1.25em 1.5em;
 	border: 1px solid var(--clr-primary-3);
 	background-color: var(--clr-primary-3);
-	color: var(--clr-neutral-1);
+	color: var(--clr-white);
 	line-height: 1;
 	text-transform: uppercase;
 	text-decoration: none;
@@ -29,5 +30,5 @@
 
 .button--outline:hover,
 .button--outline:active {
-	color: var(--clr-neutral-1);
+	color: var(--clr-white);
 }

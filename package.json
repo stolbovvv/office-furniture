@@ -67,6 +67,7 @@
 		"stylelint-order": "^6.0.4"
 	},
 	"dependencies": {
+		"@splidejs/splide": "^4.1.4",
 		"scroll-lock": "^2.1.5"
 	}
 }

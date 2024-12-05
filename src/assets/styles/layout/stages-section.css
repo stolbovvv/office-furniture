@@ -1,0 +1,34 @@
+/* Layout: Stages section */
+
+.stages-section {
+	padding-block: 3.125rem;
+}
+
+.stages-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.stages-section__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1.25rem;
+}
+
+.stages-section__header {
+	flex: 0 0 auto;
+}
+
+.stages-section__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+	gap: 1.25rem;
+}
+
+@media (width <= 47.999em) {
+	.stages-section__grid {
+		gap: 0.625rem;
+	}
+}

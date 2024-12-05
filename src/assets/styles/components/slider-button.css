@@ -1,0 +1,35 @@
+/* Component: Slider button */
+
+.slider-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+	width: 2.5rem;
+	height: 2.5rem;
+	border: none;
+	border-radius: 50%;
+	background-color: var(--clr-dark-3);
+	transition: all var(--transition-sm);
+	cursor: pointer;
+}
+
+.slider-button:hover {
+	background-color: var(--clr-dark-2);
+}
+
+.slider-button:active {
+	background-color: var(--clr-dark-1);
+}
+
+.slider-button:disabled {
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.slider-button__icon {
+	width: 100%;
+	height: 100%;
+	fill: none;
+	stroke: var(--clr-white);
+}

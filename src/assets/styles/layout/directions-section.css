@@ -1,0 +1,61 @@
+/* Layout: Directions section */
+
+.directions-section {
+	padding-block: 3.125rem;
+}
+
+.directions-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.directions-section__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1.25rem;
+}
+
+.directions-section__heading {
+	flex: 1 1 auto;
+}
+
+.directions-section__slide {
+	width: auto;
+}
+
+@media (width <= 79.999em) {
+	.directions-section {
+		padding-block: 1.875rem;
+	}
+
+	.directions-section__container {
+		gap: 1.25rem;
+	}
+}
+
+@media (width <= 63.999em) {
+	.directions-section__buttons {
+		display: flex;
+		flex: 0 0 auto;
+		gap: 0.625rem;
+	}
+
+	.directions-section__slide {
+		width: 18.75rem;
+	}
+}
+
+@media (width > 63.999em) {
+	.directions-section__buttons {
+		display: none;
+	}
+
+	.directions-section__grid,
+	.splide.is-initialized:not(.is-active) .directions-section__grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+		gap: 1.25rem;
+	}
+}
