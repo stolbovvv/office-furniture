@@ -1,3 +1,22 @@
+/* Globals */
+
 @import url("./globals/font-face.css");
 @import url("./globals/general.css");
 @import url("./globals/root.css");
+
+/* Components */
+
+@import url("./components/button.css");
+@import url("./components/burger.css");
+@import url("./components/site-logo.css");
+
+/* Layouts */
+
+@import url("./layout/header.css");
+@import url("./layout/navbar.css");
+@import url("./layout/footer.css");
+
+/* Utilities */
+
+@import url("./utilities/wrapper.css");
+@import url("./utilities/container.css");

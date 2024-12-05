@@ -1,0 +1,14 @@
+/* Component: Site logo */
+
+.site-logo {
+	display: inline-block;
+	padding: 1.25em;
+	border: 1px solid var(--clr-neutral-8);
+	background-color: var(--clr-neutral-8);
+	color: var(--clr-neutral-1);
+	font-family: var(--ff-accent);
+	line-height: 1;
+	text-transform: uppercase;
+	text-decoration: none;
+	cursor: pointer;
+}

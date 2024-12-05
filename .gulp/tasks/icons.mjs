@@ -20,25 +20,24 @@ export const handleIcons = () => {
 						'preset-default',
 						{
 							name: 'removeAttrs',
-							active: true,
 							params: {
-								attrs: '(fill|stroke|opacity|clip-rule)',
+								attrs: '(fill|stroke)',
+							},
+						},
+						// {
+						// 	name: 'addAttributesToSVGElement',
+						// 	params: {
+						// 		attributes: [{ fill: 'none', stroke: 'none' }],
+						// 	},
+						// },
+						{
+							name: 'inlineStyles',
+							params: {
+								onlyMatchedOnce: false,
 							},
 						},
 						{
 							name: 'removeDimensions',
-							active: true,
-						},
-						{
-							name: 'removeViewBox',
-							active: false,
-						},
-						{
-							name: 'inlineStyles',
-							active: true,
-							params: {
-								onlyMatchedOnce: false,
-							},
 						},
 					],
 				},

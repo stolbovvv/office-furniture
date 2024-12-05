@@ -1,0 +1,18 @@
+/* Utilities: Container */
+
+.container {
+	margin-inline: auto;
+	width: min(110rem, 100% - 5rem);
+}
+
+@media (width <= 79.999em) {
+	.container {
+		width: min(75rem, 100% - 2.5rem);
+	}
+}
+
+@media (width <= 47.999em) {
+	.container {
+		width: min(45.5rem, 100% - 1.25rem);
+	}
+}

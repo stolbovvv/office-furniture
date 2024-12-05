@@ -2,25 +2,23 @@
 
 :root {
 	/* Colors */
-	--clr-neutral-1: hsl(123, 22%, 100%);
-	--clr-neutral-2: hsl(123, 22%, 90%);
-	--clr-neutral-3: hsl(123, 22%, 80%);
-	--clr-neutral-4: hsl(123, 22%, 70%);
-	--clr-neutral-5: hsl(123, 22%, 60%);
-	--clr-neutral-6: hsl(123, 22%, 50%);
-	--clr-neutral-7: hsl(123, 22%, 40%);
-	--clr-neutral-8: hsl(123, 22%, 30%);
-	--clr-neutral-9: hsl(123, 22%, 20%);
-	--clr-neutral-10: hsl(123, 22%, 10%);
-	--clr-neutral-11: hsl(123, 22%, 0%);
+	--clr-neutral-1: #ffffff;
+	--clr-neutral-2: #cccccc;
+	--clr-neutral-3: #b3b3b3;
+	--clr-neutral-4: #989898;
+	--clr-neutral-5: #808080;
+	--clr-neutral-6: #656565;
+	--clr-neutral-7: #4d4d4d;
+	--clr-neutral-8: #333333;
+	--clr-neutral-9: #202020;
 
-	--clr-primary-1: hsl(0, 89%, 80%);
-	--clr-primary-2: hsl(0, 89%, 70%);
-	--clr-primary-3: hsl(0, 89%, 60%);
+	--clr-primary-1: #f99f9f;
+	--clr-primary-2: #f76e6e;
+	--clr-primary-3: #f43f3f;
 
-	--clr-secondary-1: hsl(223, 36%, 38%);
-	--clr-secondary-2: hsl(223, 36%, 28%);
-	--clr-secondary-3: hsl(223, 36%, 18%);
+	--clr-secondary-1: #3e5284;
+	--clr-secondary-2: #2e3c61;
+	--clr-secondary-3: #1d263d;
 
 	/* Fonts family */
 	--ff-common: "Manrope";
@@ -29,10 +27,7 @@
 	/* Common font size */
 	--fs-sm: 0.875rem;
 	--fs-md: 1rem;
-
-	/* Buttons font size */
-	--fs-button-sm: 1rem;
-	--fs-button-md: 1.25rem;
+	--fs-lg: 1.125rem;
 
 	/* Headings font size */
 	--fs-heading-1-sm: 1.375rem;

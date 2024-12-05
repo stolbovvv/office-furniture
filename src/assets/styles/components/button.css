@@ -1,0 +1,33 @@
+/* Component: Button */
+
+.button {
+	padding: 1.25em 1.5em;
+	border: 1px solid var(--clr-primary-3);
+	background-color: var(--clr-primary-3);
+	color: var(--clr-neutral-1);
+	line-height: 1;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: all var(--transition-sm);
+	cursor: pointer;
+}
+
+.button:hover {
+	border: 1px solid var(--clr-primary-2);
+	background-color: var(--clr-primary-2);
+}
+
+.button:active {
+	border: 1px solid var(--clr-primary-1);
+	background-color: var(--clr-primary-1);
+}
+
+.button--outline {
+	background-color: transparent;
+	color: var(--clr-primary-3);
+}
+
+.button--outline:hover,
+.button--outline:active {
+	color: var(--clr-neutral-1);
+}

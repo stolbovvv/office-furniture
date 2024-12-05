@@ -1,0 +1,149 @@
+/* Layout: Header */
+
+.header {
+	position: sticky;
+	top: 0;
+	background-color: var(--clr-neutral-1);
+}
+
+.header__container {
+	display: flex;
+	align-items: center;
+	gap: 1.875rem;
+	padding-block: 1.25rem;
+}
+
+.header__logo {
+	flex: 0 0 auto;
+}
+
+.header__menu {
+	flex: 0 1 auto;
+}
+
+.header__menu-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.625rem 1.25rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.header__menu-list > li {
+	line-height: var(--lh-sm);
+}
+
+.header__menu-link {
+	color: inherit;
+	text-decoration: none;
+	transition: all var(--transition-sm);
+}
+
+.header__menu-link:hover {
+	color: var(--clr-primary-2);
+}
+
+.header__menu-link:active {
+	color: var(--clr-primary-3);
+}
+
+.header__contacts {
+	display: flex;
+	flex: 0 0 auto;
+	align-items: center;
+	gap: 1.25rem;
+	margin: 0 0 0 auto;
+	padding: 0;
+	list-style: none;
+}
+
+.header__contacts-list > li {
+	line-height: var(--lh-sm);
+}
+
+.header__contacts-icon {
+	display: none;
+}
+
+.header__contacts-link {
+	color: inherit;
+	font-family: var(--ff-accent);
+	text-decoration: none;
+	transition: all var(--transition-sm);
+}
+
+.header__contacts-link:hover {
+	color: var(--clr-primary-2);
+}
+
+.header__contacts-link:active {
+	color: var(--clr-primary-3);
+}
+
+.header__callback {
+	flex: 0 0 auto;
+}
+
+.header__burger {
+	display: none;
+}
+
+@media (width <= 99.999em) {
+	.header__contacts-icon {
+		display: block;
+		width: 2rem;
+		height: 2rem;
+		fill: none;
+		stroke: currentColor;
+		transition: all var(--transition-sm);
+		cursor: pointer;
+	}
+
+	.header__contacts-icon:hover {
+		stroke: var(--clr-primary-2);
+	}
+
+	.header__contacts-icon:active {
+		stroke: var(--clr-primary-1);
+	}
+
+	.header__contacts-link {
+		position: absolute;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+		visibility: hidden;
+	}
+}
+
+@media (width <= 79.999em) {
+	.header__container {
+		gap: 1.25rem;
+	}
+
+	.header__contacts-icon {
+		width: 1.5rem;
+		height: 1.5rem;
+	}
+}
+
+@media (width <= 63.999em) {
+	.header__container {
+		padding-block: 0.625rem;
+	}
+
+	.header__menu {
+		display: none;
+	}
+
+	.header__callback {
+		display: none;
+	}
+
+	.header__burger {
+		display: block;
+		flex: 0 0 auto;
+	}
+}

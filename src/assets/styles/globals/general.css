@@ -17,11 +17,19 @@ html {
 
 body {
 	margin: 0;
+	background-color: var(--clr-neutral-1);
+	color: var(--clr-neutral-9);
 	font-family: var(--ff-common);
 	font-size: var(--fs-md);
 	font-weight: var(--fw-md);
 	line-height: var(--lh-md);
 	text-rendering: optimizeSpeed;
+}
+
+@media (width <= 79.999em) {
+	body {
+		font-size: var(--fs-sm);
+	}
 }
 
 h1,

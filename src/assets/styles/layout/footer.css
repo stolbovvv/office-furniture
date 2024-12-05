@@ -1,0 +1,145 @@
+/* Layout: Footer */
+
+.footer {
+	background-color: var(--clr-neutral-9);
+	color: var(--clr-neutral-1);
+}
+
+.footer__container {
+	display: flex;
+	flex-direction: column;
+	gap: 2.5rem;
+	padding-block: 5rem;
+}
+
+.footer__row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 1.5rem;
+}
+
+.footer__info {
+	display: flex;
+	align-items: center;
+	gap: 1.125rem;
+}
+
+.footer__info-logo {
+	flex: 0 0 auto;
+}
+
+.footer__info-text {
+	margin: 0;
+	opacity: 0.5;
+}
+
+.footer__menu-list {
+	display: flex;
+	align-items: center;
+	gap: 1.25rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer__menu-link {
+	color: inherit;
+	text-decoration: none;
+	transition: all var(--transition-sm);
+}
+
+.footer__menu-link:hover {
+	color: var(--clr-primary-2);
+}
+
+.footer__menu-link:active {
+	color: var(--clr-primary-3);
+}
+
+.footer__contacts {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	gap: 1rem 2rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.footer__contacts-address,
+.footer__contacts-link {
+	color: inherit;
+	font-family: var(--ff-accent);
+	font-size: 1.75rem;
+	font-style: normal;
+	text-decoration: none;
+	transition: all var(--transition-sm);
+}
+
+.footer__contacts-link:hover {
+	color: var(--clr-primary-2);
+}
+
+.footer__contacts-link:active {
+	color: var(--clr-primary-3);
+}
+
+.footer__links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem;
+}
+
+.footer__link {
+	opacity: 0.5;
+	color: inherit;
+	text-decoration: none;
+}
+
+.footer__link:hover {
+	opacity: 0.75;
+}
+
+.footer__link:active {
+	opacity: 1;
+}
+
+.footer__developer {
+	color: inherit;
+	text-decoration: none;
+	transition: all var(--transition-sm);
+}
+
+.footer__developer:hover {
+	color: var(--clr-primary-2);
+}
+
+.footer__developer:active {
+	color: var(--clr-primary-3);
+}
+
+@media (width <= 79.999em) {
+	.footer__container {
+		padding-block: 1.875rem;
+	}
+
+	.footer__contacts-address,
+	.footer__contacts-link {
+		color: inherit;
+		font-family: var(--ff-accent);
+		font-size: var(--fs-lg);
+	}
+}
+
+@media (width <= 47.999em) {
+	.footer__row {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.footer__menu-list {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
