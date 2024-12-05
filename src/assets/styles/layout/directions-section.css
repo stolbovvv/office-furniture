@@ -25,6 +25,12 @@
 	width: auto;
 }
 
+.directions-section__grid:not(.splide__list) {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+	gap: 1.25rem;
+}
+
 @media (width <= 79.999em) {
 	.directions-section {
 		padding-block: 1.875rem;
@@ -44,6 +50,16 @@
 
 	.directions-section__slide {
 		width: 18.75rem;
+	}
+
+	.directions-section__grid:not(.splide__list) {
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+	}
+}
+
+@media (width <= 47.999em) {
+	.directions-section__grid:not(.splide__list) {
+		grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
 	}
 }
 

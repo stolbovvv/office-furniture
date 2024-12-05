@@ -27,6 +27,12 @@
 	gap: 1.25rem;
 }
 
+@media (width <= 79.999em) {
+	.stages-section {
+		padding-block: 1.875rem;
+	}
+}
+
 @media (width <= 47.999em) {
 	.stages-section__grid {
 		gap: 0.625rem;

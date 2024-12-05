@@ -1,4 +1,5 @@
 import Splide from '@splidejs/splide';
+import { Fancybox } from '@fancyapps/ui';
 import { Navbar } from './modules/Navbar';
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +10,12 @@ window.addEventListener('DOMContentLoaded', () => {
 	new Navbar();
 
 	/**
+	 * Galleries
+	 */
+
+	Fancybox.bind('[data-fancybox="about-gallery"]');
+
+	/**
 	 * Sliders
 	 */
 
@@ -16,6 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const directionsSliders = document.querySelectorAll('[data-slider="directions"]');
 	const casesSliders = document.querySelectorAll('[data-slider="cases"]');
 	const reviewsSliders = document.querySelectorAll('[data-slider="reviews"]');
+	const teamSliders = document.querySelectorAll('[data-slider="team"]');
 
 	servicesSliders.forEach((servicesSlider) => {
 		new Splide(servicesSlider, {
@@ -79,6 +87,29 @@ window.addEventListener('DOMContentLoaded', () => {
 				1023.5: {
 					perPage: 1,
 					gap: 10,
+				},
+			},
+		}).mount();
+	});
+
+	teamSliders.forEach((teamSlider) => {
+		new Splide(teamSlider, {
+			pagination: false,
+			perPage: 5,
+			gap: 20,
+			breakpoints: {
+				1279.5: {
+					perPage: 4,
+				},
+				1023.5: {
+					perPage: 3,
+				},
+				767.5: {
+					perPage: 2,
+					gap: 10,
+				},
+				575.5: {
+					perPage: 1,
 				},
 			},
 		}).mount();

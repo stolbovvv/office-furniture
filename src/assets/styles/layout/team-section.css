@@ -1,0 +1,51 @@
+/* Layout: Team section */
+
+.team-section {
+	padding-block: 3.125rem;
+}
+
+.team-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.team-section__head {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	gap: 1.25rem;
+}
+
+.team-section__heading {
+	flex: 1 1 auto;
+}
+
+.team-section__buttons {
+	display: flex;
+	flex: 0 0 auto;
+	gap: 0.625rem;
+}
+
+.team-section__slide {
+	display: flex;
+	flex-direction: column;
+}
+
+.team-section__image {
+	aspect-ratio: 1;
+}
+
+.team-section__name {
+	margin-block-start: 0.5em;
+}
+
+.team-section__role {
+	margin-block-start: 0.5em;
+}
+
+@media (width <= 79.999em) {
+	.team-section {
+		padding-block: 1.875rem;
+	}
+}
