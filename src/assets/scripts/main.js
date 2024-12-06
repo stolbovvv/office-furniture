@@ -1,6 +1,7 @@
 import Splide from '@splidejs/splide';
 import { Fancybox } from '@fancyapps/ui';
 import { Navbar } from './modules/Navbar';
+import { Popup } from './modules/Popup';
 
 window.addEventListener('DOMContentLoaded', () => {
 	/**
@@ -8,6 +9,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	 */
 
 	new Navbar();
+	new Popup('#popup-callback');
 
 	/**
 	 * Galleries
