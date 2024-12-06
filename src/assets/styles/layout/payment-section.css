@@ -1,0 +1,87 @@
+/* Layout: Payment section */
+
+.payment-section {
+	padding-block: 3.785rem;
+}
+
+.payment-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.payment-section__head {
+	display: flex;
+	gap: 1.25rem;
+}
+
+.payment-section__heading {
+	flex: 1 1 auto;
+	margin-block-start: 0;
+}
+
+.payment-section__body {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.payment-section__description {
+	margin-block-start: 0;
+	max-width: 50rem;
+}
+
+.payment-section__subtitle {
+	margin-block-start: 0.67em;
+}
+
+.payment-section__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.875rem;
+}
+
+.payment-section__card {
+	padding: 1.25rem;
+}
+
+.payment-section__card--green {
+	background-color: var(--clr-light-green-1);
+	color: var(--clr-dark-3);
+}
+
+.payment-section__card--primary {
+	background-color: var(--clr-primary-3);
+	color: var(--clr-light-1);
+}
+
+.payment-section__card--secondary {
+	background-color: var(--clr-secondary-3);
+	color: var(--clr-light-1);
+}
+
+.payment-section__card-heading {
+	margin-block-start: 0;
+}
+
+@media (width <= 79.999em) {
+	.payment-section {
+		padding-block: 1.875rem;
+	}
+
+	.payment-section__grid {
+		gap: 1.25rem;
+	}
+}
+
+@media (width <= 63.999em) {
+	.payment-section__grid {
+		grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+	}
+}
+
+@media (width <= 47.999em) {
+	.payment-section__grid {
+		gap: 0.625rem;
+	}
+}

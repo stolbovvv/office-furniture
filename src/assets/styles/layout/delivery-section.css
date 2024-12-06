@@ -1,0 +1,63 @@
+/* Layout: Delivery section */
+
+.delivery-section {
+	padding-block: 3.125rem;
+}
+
+.delivery-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.delivery-section__head {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.25rem;
+}
+
+.delivery-section__heading {
+	flex: 1 1 auto;
+}
+
+.delivery-section__grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 1.875rem;
+}
+
+.delivery-section__card {
+	padding: 1.25rem;
+	background-color: var(--clr-light-green-1);
+}
+
+.delivery-section__card-icon {
+	width: 5rem;
+	height: 5rem;
+	fill: currentColor;
+}
+
+.delivery-section__card-heading {
+	margin-block-start: 0.67em;
+}
+
+@media (width <= 79.999em) {
+	.delivery-section {
+		padding-block: 1.875rem;
+	}
+
+	.delivery-section__grid {
+		gap: 1.25rem;
+	}
+}
+
+@media (width <= 63.999em) {
+	.delivery-section__grid {
+		grid-template-columns: repeat(auto-fill, minmax(18.75rem, 1fr));
+		gap: 0.625rem;
+	}
+
+	.delivery-section__card {
+		padding: 0.625rem;
+	}
+}

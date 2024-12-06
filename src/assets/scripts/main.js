@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	 */
 
 	Fancybox.bind('[data-fancybox="about-gallery"]');
+	Fancybox.bind('[data-fancybox="case-gallery"]');
 
 	/**
 	 * Sliders

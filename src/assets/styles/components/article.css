@@ -1,0 +1,11 @@
+/* Component: Article */
+
+.article {
+	padding-block: 3.125rem;
+}
+
+@media (width < 79.999em) {
+	.article {
+		padding-block: 1.875rem;
+	}
+}

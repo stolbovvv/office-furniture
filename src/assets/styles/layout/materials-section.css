@@ -1,0 +1,88 @@
+/* Layout: Materials section */
+
+.materials-section {
+	padding-block: 3.125rem;
+}
+
+.materials-section__container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.875rem;
+}
+
+.materials-section__head {
+	display: flex;
+	justify-content: space-between;
+	gap: 1.25rem;
+}
+
+.materials-section__heading {
+	flex: 1 1 auto;
+}
+
+.materials-section__body {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.materials-section__menu {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.625rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.materials-section__menu-link:not(.is-active) {
+	filter: grayscale(1);
+}
+
+.materials-section__grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
+	gap: 1.25rem 0.625rem;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.materials-section__card {
+	display: flex;
+	flex-direction: column;
+	color: inherit;
+	text-decoration: none;
+}
+
+.materials-section__card:hover {
+	color: var(--clr-primary-2);
+}
+
+.materials-section__card:active {
+	color: var(--clr-primary-1);
+}
+
+.materials-section__card-image {
+	aspect-ratio: 1;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+
+.materials-section__card-name {
+	margin-block-start: 0.67em;
+	transition: all var(--transition-sm);
+}
+
+@media (width < 79.999em) {
+	.materials-section {
+		padding-block: 1.875rem;
+	}
+}
+
+@media (width < 47.999em) {
+	.materials-section__menu-link.button {
+		padding: 0.75em 1em;
+	}
+}

@@ -26,6 +26,7 @@
 @import url("./components/review-card.css");
 @import url("./components/blog-card.css");
 @import url("./components/callback-form.css");
+@import url("./components/article.css");
 
 /* Layouts */
 
@@ -46,6 +47,13 @@
 @import url("./layout/about-section.css");
 @import url("./layout/blog-section.css");
 @import url("./layout/blog-article.css");
+@import url("./layout/contacts-section.css");
+@import url("./layout/payment-section.css");
+@import url("./layout/delivery-section.css");
+@import url("./layout/materials-section.css");
+@import url("./layout/materials-single-section.css");
+@import url("./layout/cases-single-section.css");
+@import url("./layout/not-found.css");
 
 /* Utilities */
 
