@@ -23,10 +23,10 @@
 		"url": "https://github.com/stolbovvv"
 	},
 	"lint-staged": {
-		"*.{js,mjs}": [
+		"./src/**/*.{js,mjs}": [
 			"eslint --fix"
 		],
-		"*.css": [
+		"./src/**/*.css": [
 			"stylelint --fix"
 		]
 	},
