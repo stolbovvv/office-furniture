@@ -127,10 +127,3 @@ window.addEventListener('DOMContentLoaded', () => {
 		}).mount();
 	});
 });
-
-console.log(
-	'%cGOWEB.PRO\n' + '%cХочешь такой же сайт?' + '%c\n\nПиши в telegram: @goweb_pro\nНаш сайт: https://goweb.pro',
-	'font-size: 37px; font-weight: 900; color: rgb(90, 205, 211);',
-	'font-size: 14px; background: rgb(90, 205, 211); padding: 5px 10px; color: rgb(255, 255, 255);',
-	'line-height: 1.5; background: none;',
-);
