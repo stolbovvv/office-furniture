@@ -43,16 +43,24 @@
 .about-section__item-content {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	align-items: flex-start;
+	gap: 1.25rem;
 	width: calc(40% - 1.875rem * 1 / 2);
 }
 
-.about-section__item-content > * + * {
+.about-section__item-content-text {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.about-section__item-content-text > * + * {
 	margin-block-start: 0.67em;
 }
 
-.about-section__item-content > button {
-	margin-block-start: 1em;
+.about-section__item-content-text > *:first-child {
+	margin-block-start: 0;
 }
 
 @media (width <= 79.999em) {

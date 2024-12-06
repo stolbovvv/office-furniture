@@ -24,6 +24,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const casesSliders = document.querySelectorAll('[data-slider="cases"]');
 	const reviewsSliders = document.querySelectorAll('[data-slider="reviews"]');
 	const teamSliders = document.querySelectorAll('[data-slider="team"]');
+	const imagesSliders = document.querySelectorAll('[data-slider="images"]');
 
 	servicesSliders.forEach((servicesSlider) => {
 		new Splide(servicesSlider, {
@@ -112,6 +113,14 @@ window.addEventListener('DOMContentLoaded', () => {
 					perPage: 1,
 				},
 			},
+		}).mount();
+	});
+
+	imagesSliders.forEach((imagesSlider) => {
+		new Splide(imagesSlider, {
+			type: 'fade',
+			arrows: false,
+			pagination: true,
 		}).mount();
 	});
 });

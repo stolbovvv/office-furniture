@@ -16,6 +16,7 @@
 @import url("./components/burger.css");
 @import url("./components/button.css");
 @import url("./components/slider-button.css");
+@import url("./components/slider-pagination.css");
 @import url("./components/input.css");
 @import url("./components/bread-crumbs.css");
 @import url("./components/service-card.css");
@@ -23,6 +24,7 @@
 @import url("./components/case-card.css");
 @import url("./components/stage-card.css");
 @import url("./components/review-card.css");
+@import url("./components/blog-card.css");
 @import url("./components/callback-form.css");
 
 /* Layouts */
@@ -33,6 +35,7 @@
 @import url("./layout/hero-section.css");
 @import url("./layout/services-section.css");
 @import url("./layout/directions-section.css");
+@import url("./layout/directions-single-section.css");
 @import url("./layout/cases-section.css");
 @import url("./layout/stages-section.css");
 @import url("./layout/callback-section.css");
@@ -41,6 +44,8 @@
 @import url("./layout/gallery-section.css");
 @import url("./layout/team-section.css");
 @import url("./layout/about-section.css");
+@import url("./layout/blog-section.css");
+@import url("./layout/blog-article.css");
 
 /* Utilities */
 
