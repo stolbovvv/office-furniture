@@ -52,13 +52,13 @@
 				<ul class="header__contacts">
 					<li>
 						<svg class="header__contacts-icon">
-							<use href="./assets/icons/sprite.svg?v=1733862191000#icon-phone" />
+							<use href="./assets/icons/sprite.svg?v=1733868932000#icon-phone" />
 						</svg>
 						<a class="header__contacts-link" href="tel:+79120082023">+7 (912) 008-20-26</a>
 					</li>
 					<li>
 						<svg class="header__contacts-icon">
-							<use href="./assets/icons/sprite.svg?v=1733862191000#icon-mail" />
+							<use href="./assets/icons/sprite.svg?v=1733868932000#icon-mail" />
 						</svg>
 						<a class="header__contacts-link" href="mailto:gmail@yandex.com">gmail@yandex.com</a>
 					</li>
@@ -177,12 +177,12 @@
 						<div class="team-section__buttons splide__arrows">
 							<button class="slider-button splide__arrow splide__arrow--prev">
 								<svg class="slider-button__icon">
-									<use href="./assets/icons/sprite.svg?v=1733862191000#icon-chevron-left" />
+									<use href="./assets/icons/sprite.svg?v=1733868932000#icon-chevron-left" />
 								</svg>
 							</button>
 							<button class="slider-button splide__arrow splide__arrow--next">
 								<svg class="slider-button__icon">
-									<use href="./assets/icons/sprite.svg?v=1733862191000#icon-chevron-right" />
+									<use href="./assets/icons/sprite.svg?v=1733868932000#icon-chevron-right" />
 								</svg>
 							</button>
 						</div>
@@ -284,12 +284,12 @@
 						<div class="cases-section__buttons splide__arrows">
 							<button class="slider-button splide__arrow splide__arrow--prev">
 								<svg class="slider-button__icon">
-									<use href="./assets/icons/sprite.svg?v=1733862191000#icon-chevron-left" />
+									<use href="./assets/icons/sprite.svg?v=1733868932000#icon-chevron-left" />
 								</svg>
 							</button>
 							<button class="slider-button splide__arrow splide__arrow--next">
 								<svg class="slider-button__icon">
-									<use href="./assets/icons/sprite.svg?v=1733862191000#icon-chevron-right" />
+									<use href="./assets/icons/sprite.svg?v=1733868932000#icon-chevron-right" />
 								</svg>
 							</button>
 						</div>
@@ -375,12 +375,12 @@
 						<div class="reviews-section__buttons splide__arrows">
 							<button class="slider-button splide__arrow splide__arrow--prev">
 								<svg class="slider-button__icon">
-									<use href="./assets/icons/sprite.svg?v=1733862191000#icon-chevron-left" />
+									<use href="./assets/icons/sprite.svg?v=1733868932000#icon-chevron-left" />
 								</svg>
 							</button>
 							<button class="slider-button splide__arrow splide__arrow--next">
 								<svg class="slider-button__icon">
-									<use href="./assets/icons/sprite.svg?v=1733862191000#icon-chevron-right" />
+									<use href="./assets/icons/sprite.svg?v=1733868932000#icon-chevron-right" />
 								</svg>
 							</button>
 						</div>
@@ -499,44 +499,295 @@
 			</section>
 
 			<!-- Квиз -->
-			<section class="quiz-section no-margin-bottom">
-				<div class="quiz-section__head">
-					<div class="quiz-section__head-container container">
-						<h2 class="quiz-section__head-heading heading-3">Предварительный расчет стоимости</h2>
-					</div>
-				</div>
-				<div class="quiz-section__body">
-					<div class="quiz-section__body-container container">
-						<div class="quiz-section__grid">
-							<label class="quiz-section__card">
-								<input class="quiz-section__card-input" type="radio" name="product-type" id="product-type-1">
-								<img class="quiz-section__card-image" src="./assets/images/quiz-1.jpg" alt="">
-								<span class="quiz-section__card-name">Магазин</span>
-							</label>
-							<label class="quiz-section__card">
-								<input class="quiz-section__card-input" type="radio" name="product-type" id="product-type-1">
-								<img class="quiz-section__card-image" src="./assets/images/quiz-2.jpg" alt="">
-								<span class="quiz-section__card-name">Офис</span>
-							</label>
-							<label class="quiz-section__card">
-								<input class="quiz-section__card-input" type="radio" name="product-type" id="product-type-1">
-								<img class="quiz-section__card-image" src="./assets/images/quiz-3.jpg" alt="">
-								<span class="quiz-section__card-name">Торговый остров</span>
-							</label>
-							<label class="quiz-section__card">
-								<input class="quiz-section__card-input" type="radio" name="product-type" id="product-type-1">
-								<img class="quiz-section__card-image" src="./assets/images/quiz-4.jpg" alt="">
-								<span class="quiz-section__card-name">Свой ответ</span>
-							</label>
+			<section class="quiz-section no-margin-bottom js-quiz" id="quiz">
+				<div class="quiz-section__questions js-quiz-questions is-active">
+					<div class="quiz-section__head">
+						<div class="quiz-section__head-container container">
+							<h2 class="quiz-section__head-heading heading-3">Предварительный расчет стоимости</h2>
 						</div>
-						<div class="quiz-section__foot">
-							<button class="quiz-section__button-prev button button--outline">Назад</button>
-							<button class="quiz-section__button-next button">Далее</button>
-							<div class="quiz-section__counter">
-								<span class="quiz-section__counter-value heading-3">1</span>
-								<span class="quiz-section__counter-total heading-3">/10</span>
+					</div>
+					<div class="quiz-section__main">
+						<div class="quiz-section__main-container container">
+							<!-- step 1 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-1">
+								<p class="quiz-section__step-heading">Для чего вам нужна мебель?</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-2-1" data-form-input="quiz-form-variant"
+										data-step-ratio="400000">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-1.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Магазин</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-2-2" data-form-input="quiz-form-variant"
+										data-step-ratio="300000">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-2.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Офис</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-2-3" data-form-input="quiz-form-variant"
+										data-step-ratio="200000">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-3.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Торговый остров</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-2-4" data-form-input="quiz-form-variant"
+										data-step-ratio="200000">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-4.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="text" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 2-1 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-2-1">
+								<p class="quiz-section__step-heading">Выберите площадь помещения</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-1" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-5.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">0 - 50 кв метров</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-1" data-form-input="quiz-form-square" data-step-ratio="2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-6.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">50 - 100 кв метров</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-1" data-form-input="quiz-form-square" data-step-ratio="3">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-7.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">100 - 150 кв метров</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-1" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-8.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="number" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 2-2 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-2-2">
+								<p class="quiz-section__step-heading">Выберите площадь помещения</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-2" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-9.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">0 - 50 кв метров</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-2" data-form-input="quiz-form-square" data-step-ratio="2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-10.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">50 - 100 кв метров</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-2" data-form-input="quiz-form-square" data-step-ratio="3">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-11.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">100 - 150 кв метров</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-2" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-12.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="number" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 2-3 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-2-3">
+								<p class="quiz-section__step-heading">Выберите площадь торгового острова</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-3" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-13.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">0 - 50 кв метров</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-3" data-form-input="quiz-form-square" data-step-ratio="1.5">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-14.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">50 - 100 кв метров</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-3" data-form-input="quiz-form-square" data-step-ratio="2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-15.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">100 - 150 кв метров</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-3" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-16.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="number" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 2-4 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-2-4">
+								<p class="quiz-section__step-heading">Свой вариант площади</p>
+								<p class="quiz-section__step-description">Введите свой вариант площади</p>
+
+								<div class="quiz-section__step-grid">
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-3-4" data-form-input="quiz-form-square" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-16.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="number" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 3-1 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-3-1">
+								<p class="quiz-section__step-heading">Выберите сферу</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-17.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Винотека</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-18.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Продукты</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-19.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Техника</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-20.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="text" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 3-2 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-3-2">
+								<p class="quiz-section__step-heading">Выберите стиль офиса</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-21.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Офис в стиле хай тек</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.5">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-22.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Офис в стиле лофт</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-23.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Офис в классическом стиле</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-24.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="text" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 3-3 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-3-3">
+								<p class="quiz-section__step-heading">Выберите деятельность торгового острова</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-25.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Кофейня</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-26.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Аксессуары</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1.2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-27.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">Оказание услуг</span>
+									</button>
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-28.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="text" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 3-4 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-3-4">
+								<p class="quiz-section__step-heading">Свой вариант</p>
+								<p class="quiz-section__step-description">Введите свой вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<label class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-step-4" data-form-input="quiz-form-design" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-24.jpg" alt="">
+										<input class="quiz-section__step-item-input js-quiz-form-input-value" type="text" placeholder="Свой ответ">
+									</label>
+								</div>
+							</div>
+
+							<!-- step 4 -->
+							<div class="quiz-section__step js-quiz-step" id="quiz-step-4">
+								<p class="quiz-section__step-heading">Выберите материалы</p>
+								<p class="quiz-section__step-description">Выберите нужный вариант</p>
+
+								<div class="quiz-section__step-grid">
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="1">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-29.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="1.5">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-30.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + МДФ эмаль</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="1.7">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-31.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + МДФ эмаль + Стекло</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-32.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + МДФ эмаль + Стекло + Металл</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="1.2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-33.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + Стекло</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="1.5">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-34.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + Стекло + Металл </span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="3">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-35.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + Искусственный камень</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="3.2">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-36.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + Стекло + Искусственный камень</span>
+									</button>
+									<button class="quiz-section__step-item js-quiz-variant" data-next-step="quiz-result" data-form-input="quiz-form-material" data-step-ratio="3.5">
+										<img class="quiz-section__step-item-image" src="./assets/images/quiz-37.jpg" alt="">
+										<span class="quiz-section__step-item-name js-quiz-form-input-value">ЛДСП + Стекло + Искусственный камень + Металл</span>
+									</button>
+								</div>
+							</div>
+
+							<div class="quiz-section__foot">
+								<button class="quiz-section__button-prev button button--outline js-quiz-prev-button">Назад</button>
+								<button class="quiz-section__button-next button js-quiz-next-button">Далее</button>
+								<div class="quiz-section__counter">
+									<span class="quiz-section__counter-value heading-3 js-quiz-counter-count">0</span>
+									<span class="quiz-section__counter-total heading-3">/</span>
+									<span class="quiz-section__counter-total heading-3 js-quiz-counter-total">4</span>
+								</div>
 							</div>
 						</div>
+					</div>
+				</div>
+
+				<div class="quiz-section__result js-quiz-result" id="quiz-result">
+					<div class="quiz-section__result-container container">
+						<div class="quiz-section__result-head">
+							<h4 class="quiz-section__result-heading heading-3">Предварительная стоимость</h4>
+							<p class="quiz-section__result-result heading-4 js-quiz-result-value"></p>
+							<p class="quiz-section__result-message">
+								Менеджер внимательно выслушал мои пожелания и предложил несколько вариантов, которые идеально подошли бы для моего офиса.
+							</p>
+						</div>
+						<form class="quiz-section__result-form">
+							<input id="quiz-form-variant" type="text" readonly style="display: none;" name="quiz-variant">
+							<input id="quiz-form-square" type="text" readonly style="display: none;" name="quiz-square">
+							<input id="quiz-form-design" type="text" readonly style="display: none;" name="quiz-design">
+							<input id="quiz-form-material" type="text" readonly style="display: none;" name="quiz-material">
+							<input class="quiz-section__result-input input" type="text" name="user-name" placeholder="Введите имя" required>
+							<input class="quiz-section__result-input input" type="tel" name="user-phone" placeholder="Введите телефон" required>
+							<button class="quiz-section__result-button button">Отправить заявку</button>
+						</form>
 					</div>
 				</div>
 			</section>

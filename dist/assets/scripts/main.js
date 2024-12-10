@@ -4060,6 +4060,7 @@
   		this.questions = this.element.querySelector('.js-quiz-questions');
   		this.prevButton = this.element.querySelector('.js-quiz-prev-button');
   		this.nextButton = this.element.querySelector('.js-quiz-next-button');
+  		this.counterCount = this.element.querySelector('.js-quiz-counter-count');
   	}
 
   	toggleDisplay(element, shouldShow) {
@@ -4095,6 +4096,7 @@
   			});
   		}
 
+  		this.counterCount.textContent = this.navigation.length;
   		this.updateResultValue();
   		this.updatePrevButtonState();
   	}
