@@ -29,9 +29,6 @@ export class Popup {
 	};
 
 	init() {
-		console.log(`.js-popup-button[data-popup-open="${this.element.id}"]`);
-		console.log(this.openButtons);
-
 		this.openButtons.forEach((button) => button.addEventListener('click', this.open));
 		this.closeButtons.forEach((button) => button.addEventListener('click', this.close));
 

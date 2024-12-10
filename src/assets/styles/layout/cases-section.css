@@ -79,7 +79,8 @@
 		width: calc(30% - 1.25rem * 2 / 3);
 	}
 
-	.cases-section__slide:nth-child(5n + 1) {
+	.cases-section__slide:nth-child(6n + 1),
+	.cases-section__slide:nth-child(6n + 6) {
 		width: calc(40% - 1.25rem * 2 / 3);
 	}
 }
