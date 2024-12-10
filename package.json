@@ -69,6 +69,7 @@
 	"dependencies": {
 		"@fancyapps/ui": "^5.0.36",
 		"@splidejs/splide": "^4.1.4",
-		"scroll-lock": "^2.1.5"
+		"scroll-lock": "^2.1.5",
+		"truncate-html": "^1.1.2"
 	}
 }

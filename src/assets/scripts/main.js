@@ -3,6 +3,7 @@ import { Fancybox } from '@fancyapps/ui';
 import { Navbar } from './modules/Navbar';
 import { Popup } from './modules/Popup';
 import { Quiz } from './modules/Quiz';
+import { Review } from './modules/Review';
 
 window.addEventListener('DOMContentLoaded', () => {
 	/**
@@ -12,6 +13,15 @@ window.addEventListener('DOMContentLoaded', () => {
 	new Navbar();
 	new Popup('#popup-callback');
 	new Quiz('#quiz');
+
+	document.querySelectorAll('.review-card').forEach((review) => {
+		new Review(review, {
+			collapsed: true,
+			contentLength: 200,
+			bodySelector: '.review-card__body',
+			buttonSelector: '.review-card__button-text',
+		});
+	});
 
 	/**
 	 * Galleries

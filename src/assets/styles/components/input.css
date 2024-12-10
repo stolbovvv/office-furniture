@@ -15,5 +15,6 @@
 }
 
 .input::placeholder {
-	color: var(--clr-secondary-3);
+	opacity: 0.5;
+	color: var(--clr-white);
 }

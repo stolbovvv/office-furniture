@@ -11,11 +11,15 @@ export class Quiz {
 	}
 
 	initializeProperties() {
-		this.steps = [...this.element.querySelectorAll('.js-quiz-step')];
-		this.buttonVariants = [...this.element.querySelectorAll('button.js-quiz-variant')];
-		this.customVariants = [...this.element.querySelectorAll('label.js-quiz-variant')];
+		const queryAll = (className) => [...this.element.querySelectorAll(className)];
+
+		this.steps = queryAll('.js-quiz-step');
+		this.buttonVariants = queryAll('button.js-quiz-variant');
+		this.customVariants = queryAll('label.js-quiz-variant');
 		this.navigation = [];
+		this.stepRatios = [];
 		this.result = this.element.querySelector('.js-quiz-result');
+		this.resultValue = this.element.querySelector('.js-quiz-result-value');
 		this.questions = this.element.querySelector('.js-quiz-questions');
 		this.prevButton = this.element.querySelector('.js-quiz-prev-button');
 		this.nextButton = this.element.querySelector('.js-quiz-next-button');
@@ -23,6 +27,18 @@ export class Quiz {
 
 	toggleDisplay(element, shouldShow) {
 		element.style.display = shouldShow ? '' : 'none';
+	}
+
+	updateResultValue() {
+		if (!this.resultValue) return;
+
+		const result = this.stepRatios.every((ratio) => !isNaN(Number(ratio)))
+			? this.stepRatios.reduce((acc, ratio) => acc * ratio, 1)
+			: null;
+
+		this.resultValue.textContent = result
+			? `${Number.parseFloat(result).toFixed(2)} ₽`
+			: 'Не удалось определить сумму...';
 	}
 
 	updatePrevButtonState() {
@@ -38,14 +54,17 @@ export class Quiz {
 
 		if (!isResultStep) {
 			this.steps.forEach((step) => {
-				step.id === id ? step.classList.add('is-current') : step.classList.remove('is-current');
+				step.classList.toggle('is-current', step.id === id);
 			});
 		}
 
+		this.updateResultValue();
 		this.updatePrevButtonState();
 	}
 
 	navigateToPrevStep() {
+		this.stepRatios.pop();
+
 		if (this.navigation.length > 1) {
 			this.navigation.pop();
 			this.navigateToStep(this.navigation.at(-1));
@@ -54,54 +73,64 @@ export class Quiz {
 
 	navigateToNextStep() {
 		const currentStep = this.steps.find((step) => step.classList.contains('is-current'));
-		if (currentStep) {
-			const selectedVariant = currentStep.querySelector('.js-quiz-variant.is-selected');
-			const input = selectedVariant?.querySelector('input');
+		if (!currentStep) return;
 
-			if (input && !input.value.trim()) {
-				alert('Введите свой вариант');
-				return;
-			}
+		const selectedVariant = currentStep.querySelector('.js-quiz-variant.is-selected');
+		const input = selectedVariant?.querySelector('input');
 
-			const nextStepId = selectedVariant?.dataset?.nextStep;
-			if (nextStepId) {
-				this.navigation.push(nextStepId);
-				this.navigateToStep(nextStepId);
-			}
+		if (input && !input.value.trim()) {
+			alert('Введите свой вариант');
+			return;
+		}
+
+		const ratio = selectedVariant?.dataset?.stepRatio;
+		if (ratio) {
+			this.stepRatios.push(ratio);
+		}
+
+		const nextStepId = selectedVariant?.dataset?.nextStep;
+		if (nextStepId) {
+			this.navigation.push(nextStepId);
+			this.navigateToStep(nextStepId);
 		}
 	}
 
 	handleVariantClick(variantElement) {
 		const currentStep = this.steps.find((step) => step.classList.contains('is-current'));
-		if (currentStep) {
-			// Снимаем класс с других вариантов
-			currentStep.querySelectorAll('.js-quiz-variant').forEach((variant) => {
-				variant.classList.remove('is-selected');
-			});
+		if (!currentStep) return;
 
-			// Добавляем класс выбранному варианту
-			variantElement.classList.add('is-selected');
+		currentStep.querySelectorAll('.js-quiz-variant').forEach((variant) => {
+			variant.classList.remove('is-selected');
+		});
 
-			const input = variantElement.querySelector('input');
-			// Проверяем наличие значения в input
-			if (input && !input.value.trim()) {
-				return; // Если нет значения, не переходим к следующему шагу
-			}
+		variantElement.classList.add('is-selected');
 
-			const nextStepId = variantElement.dataset?.nextStep;
-			if (nextStepId) {
-				this.navigation.push(nextStepId);
-				this.navigateToStep(nextStepId);
-			}
+		const input = variantElement.querySelector('input');
+		if (input && !input.value.trim()) return;
+
+		const formInput = variantElement?.dataset?.formInput;
+		const formInputValue = variantElement.querySelector('.js-quiz-form-input-value');
+		if (formInput && formInputValue) {
+			const value = formInputValue.tagName === 'INPUT' ? formInputValue.value : formInputValue.textContent;
+
+			this.result.querySelector(`input#${formInput}`).value = value;
+		}
+
+		const ratio = variantElement?.dataset?.stepRatio;
+		if (ratio) {
+			this.stepRatios.push(ratio);
+		}
+
+		const nextStepId = variantElement.dataset?.nextStep;
+		if (nextStepId) {
+			this.navigation.push(nextStepId);
+			this.navigateToStep(nextStepId);
 		}
 	}
 
 	markInitialSelectedVariants() {
 		this.steps.forEach((step) => {
-			const firstVariant = step.querySelector('.js-quiz-variant');
-			if (firstVariant) {
-				firstVariant.classList.add('is-selected');
-			}
+			step.querySelector('.js-quiz-variant')?.classList.add('is-selected');
 		});
 	}
 
@@ -110,25 +139,20 @@ export class Quiz {
 		this.nextButton?.addEventListener('click', () => this.navigateToNextStep());
 
 		this.buttonVariants.forEach((buttonVariant) => {
-			buttonVariant.addEventListener('click', () => {
-				this.handleVariantClick(buttonVariant);
-			});
+			buttonVariant.addEventListener('click', () => this.handleVariantClick(buttonVariant));
 		});
 
 		this.customVariants.forEach((customVariant) => {
 			const input = customVariant.querySelector('input');
 
-			// Обработка клика на label, чтобы отметить его как is-selected
 			customVariant.addEventListener('click', (e) => {
-				if (e.target.nodeName === 'INPUT') return; // Если кликнули по input, не меняем состояние
+				if (e.target.nodeName === 'INPUT') return;
 				this.handleVariantClick(customVariant);
 			});
 
-			// Обработка нажатия Enter в input
 			input?.addEventListener('keydown', (e) => {
 				if (e.key === 'Enter') {
-					const nextStepId = customVariant.dataset?.nextStep;
-					if (input.value && nextStepId) {
+					if (input.value) {
 						this.handleVariantClick(customVariant);
 					} else {
 						alert('Введите свой вариант');
