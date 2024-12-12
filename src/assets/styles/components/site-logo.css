@@ -1,14 +1,36 @@
 /* Component: Site logo */
 
 .site-logo {
-	display: inline-block;
-	padding: 1.25em;
-	border: 1px solid var(--clr-dark-2);
-	background-color: var(--clr-dark-2);
-	color: var(--clr-white);
+	display: inline-flex;
+	align-items: center;
+	gap: 0.625rem;
+	color: inherit;
 	font-family: var(--ff-accent);
 	line-height: 1;
 	text-transform: uppercase;
 	text-decoration: none;
 	cursor: pointer;
+}
+
+.site-logo img {
+	flex: 0 0 auto;
+	width: 3.125rem;
+	height: 3.125rem;
+}
+
+.site-logo span {
+	flex: 1 1 auto;
+	max-width: 11rem;
+}
+
+@media (width <= 47.999em) {
+	.site-logo img {
+		width: 1.875rem;
+		height: 1.875rem;
+	}
+
+	.site-logo span {
+		max-width: 7rem;
+		font-size: 0.625rem;
+	}
 }

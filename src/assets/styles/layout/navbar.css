@@ -36,7 +36,9 @@
 	}
 
 	.navbar__logo {
+		display: flex;
 		flex: 0 0 auto;
+		align-items: center;
 	}
 
 	.navbar__burger {

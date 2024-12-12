@@ -21,12 +21,14 @@
 
 .footer__info {
 	display: flex;
-	align-items: center;
-	gap: 1.125rem;
+	flex-direction: column;
+	gap: 0.625rem;
 }
 
 .footer__info-logo {
+	display: flex;
 	flex: 0 0 auto;
+	align-items: center;
 }
 
 .footer__info-text {
